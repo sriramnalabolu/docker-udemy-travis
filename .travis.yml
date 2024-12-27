@@ -10,8 +10,10 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id: <encrypted access_key_id>
-  secret_access_key: <encrypted secret_access_key>
-  bucket: <bucket>
-  edge: true # opt in to dpl v2
+  access_key_id: $ACCESS_KEY
+  secret_access_key: "$SECRET_ACCESS_KEY"
+  REGION: "us-east-1"
+  app: "example-app-name"
+  env: "example-app-environment"
+  bucket_name: "the-target-s3-bucket"
   
